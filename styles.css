@@ -1,70 +1,150 @@
-/*Reiniciar el navegador para evitar diferencia de estilos*/
-* {
-    box-sizing: border-box;
+/* GENERAL */
+body {
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #0a0a0a;
+    color: #f2f4f7;
 }
 
-/*estilos generales del cuerpo de la pagina*/
-body{
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 1.6;
-    background: rgb(87, 77, 221);
-    color: rgb(46, 46, 5);
-}
-
-/* estilo para el encabezado con degradado*/
-.site-header{
-    background: radial-gradient(circle, #4f46e6, #06b6d4);
-    color: rgb(228, 245, 245);
-    padding: 1rem;
+/* HEADER */
+.site-header {
     text-align: center;
+    padding: 40px 20px;
+    background: radial-gradient(circle at center,
+      #38BDF8 0%,
+      #3B82F6 40%,
+      #1E293B 80%
+    );
+    color: white;
 }
 
-.subtitle{
-    opacity: 50%;
+.site-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
-.content{
-    display: flex; /*coloca las tarjetas una al lado de la otra*/
-    gap: 3rem; /* separar las tarjetas*/
-    flex-wrap: wrap; /* permite que las tarjetas bajen si no caben*/
-    justify-content: center;
-    padding: 2rem;
+.site-header h2.subtitle {
+    margin-top: 10px;
+    font-weight: 300;
 }
 
-.card{
-    background: #4c4b5c;
-    padding: 1.25rem;
-    border-radius: 22px;
-    box-shadow: 0.6px 18px rgb(199, 199, 181); /* dar profundidad a la card*/
-    width: 300px;
-}
-.card h2{
-    margin-bottom: 0.5rem;
-}
-
-.card p{
-    margin-bottom: 1rem;
-    color: darkgray;
-}
-
-.btn{
+/* DROPDOWN MENU */
+.dropdown {
     display: inline-block;
-    padding: 0.5rem 1rem;
-    background: #1f1f19;
-    border-radius: 8px;
-    color: rgb(247, 240, 240);
-    justify-content: center;
-}
-.card a{
-    justify-content: center;
-    display: flex;
-    text-align: center;
+    margin-top: 25px;
 }
 
-.site-footer{
+.dropbtn {
+    background-color: #1E293B;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.dropbtn:hover {
+    background-color: #0F172A;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1E293B;
+    min-width: 140px;
+    border-radius: 6px;
+    margin-top: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #0F172A;
+}
+
+/* Hace que el menú se despliegue */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* MAIN / SECTIONS */
+.content {
+    padding: 40px 20px;
+}
+
+.card {
+    background: rgb(41, 39, 39);
+    margin: 40px auto;
+    padding: 25px;
+    width: 80%;
+    border-radius: 10px;
     text-align: center;
-    padding: 1rem;
-    color: #570510;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+}
+
+.img-box {
+    width: 180px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+/* BOTONES */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #3B82F6;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #2563EB;
+}
+
+/* FOOTER */
+.site-footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #1E293B;
+    color: white;
+}
+
+.site-footer h2 {
+    margin-top: 0;
+}
+
+.site-footer .btn {
+    background: #38BDF8;
+    color: black;
+}
+
+.site-footer .btn:hover {
+    background: #0EA5E9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .card {
+        width: 95%;
+    }
+
+    .dropbtn {
+        width: 150px;
+    }
 }
