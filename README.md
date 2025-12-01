@@ -10,6 +10,7 @@ El objetivo de este repositorio es crear una pagina web es brindar una herramien
 1. Clonar el repositorio
     git clone https://github.com/edixonm92-ship-it/Proyecto_GitHub.git
 2. Abre el archivo index.html en su navegador
+3. Abre el archivo styles.css en su navegador
 
 ## Requisitos <!--seccion donde se especifica que requerimientos debe tener el usuario-->
 No se requieren dependencias externas
